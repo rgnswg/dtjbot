@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 
 TOKEN = os.getenv('TELEGRAM_TOKEN')
-CHAT_ID='@memecoinsolprice'
+CHAT_ID='@normiesbotsol'
 URL = "https://api.dexscreener.com/latest/dex/tokens/"
 
 def chunk_list(lst, n):
@@ -133,12 +133,12 @@ async def send_message():
         if not addys:
             logging.error("No se encontraron direcciones en el archivo")
             return
-            
+
         data = getInfoFromAddys(addys)
         if not data:
             logging.error("No se pudo obtener información de los tokens")
             return
-            
+
         table = format_table(data)
         await bot.send_message(chat_id=CHAT_ID, text=table, parse_mode='HTML')
         logging.info("Mensaje enviado exitosamente")
