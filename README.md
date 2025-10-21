@@ -1,1 +1,2 @@
-https://t.me/memecoinsolprice
+dexscreener api -> telegram api
+python gud tech
